@@ -31,7 +31,21 @@ actions = {'construction':{'plank':29,
                       'babydragon bones':105,
                       'dragon bones':252,
                       'lava dragon bones':297.5,
-                      'dagannoth bones':437.5}}
+                      'dagannoth bones':437.5},
+            'woodcutting':{'logs': 25,
+                           'oak': 37.5,
+                           'willow': 67.5,
+                           'teak': 85,
+                           'maple': 100,
+                           'yew': 175,
+                           'magic': 250,
+                           'redwood': 380},
+            'hunter': {'barb-tailed kebbit': 168.0,
+                       'orange salamander': 224.0,
+                       'red salamander': 272.0,
+                       'red chinchompa': 265.0,
+                       'black salamander': 319.5,
+                       'black chinchompa': 315.0}}
 
 """ Experience table """
 

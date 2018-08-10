@@ -6,20 +6,12 @@ Created on Mon Aug  6 11:23:19 2018
 """
 
 import math
+import csv
 
-#def furn_to_target(target, current = 1, exp = False) :
-#    """ Given target level and optional current level, give furniture options """
-#    if exp == False :
-#        curr_exp = exp_table[current]
-#    else :
-#        curr_exp = current
-#    
-#    target_mats = mats_to_lvl(exp_table[target]-curr_exp)
-#    print(target_mats)  
-#    
-#    for i, j in train_furn.items() :
-#        furn = math.ceil(target_mats[j['material']]/j['number'])
-#        print(i+': '+str(furn))
+def add_skill(skill, filepath):
+    reader = csv.reader(open(filepath, 'r'))
+    skill_dict = dict((rows[0],float(rows[1])) for rows in reader)
+    actions[skill] = skill_dict
         
 def acts_to_lvl(skill, target, current = 1, exp = False) :
     """ Generalized skill calculator """
