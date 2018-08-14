@@ -1,24 +1,24 @@
 skill,method,level,exp,always
-construction,plank,1,29,
-construction,oak plank,33,60,True
-construction,mahogany plank,52,120,
-construction,teak plank,66,90,
-prayer,babydragon bones,1,105,True
-prayer,dragon bones,1,252,True
-prayer,lava dragon bones,1,297.5,True
-prayer,dagannoth bones,1,437.5,True
-prayer,superior dragon bones,70,525,True
+construction,planks,1,29,
+construction,oak planks,33,60,TRUE
+construction,mahogany planks,52,120,
+construction,teak planks,66,90,
+prayer,babydragon bones,1,105,TRUE
+prayer,dragon bones,1,252,TRUE
+prayer,lava dragon bones,1,297.5,TRUE
+prayer,dagannoth bones,1,437.5,TRUE
+prayer,superior dragon bones,70,525,
 woodcutting,logs,1,25,
-woodcutting,oak,15,37.5,
-woodcutting,willow,30,67.5,True
-woodcutting,teak,35,85,True
-woodcutting,maple,45,100,
-woodcutting,yew,60,175,
-woodcutting,magic,75,250,
-woodcutting,redwood,90,380,
-hunter,barb-tailled kebbit,33,168,
-hunter,orange salamander,47,224,
-hunter,red salamander,59,272,True
-hunter,red chinchompa,63,265,True
-hunter,black salamander,67,319.5,True
-hunter,black chinchompa,73,315,True
+woodcutting,oak logs,15,37.5,
+woodcutting,willow logs,30,67.5,TRUE
+woodcutting,teak logs,35,85,TRUE
+woodcutting,maple logs,45,100,
+woodcutting,yew logs,60,175,
+woodcutting,magic logs,75,250,
+woodcutting,redwood logs,90,380,
+hunter,barb-tailed kebbits,33,168,
+hunter,orange salamanders,47,224,
+hunter,red salamanders,59,272,TRUE
+hunter,red chinchompas,63,265,TRUE
+hunter,black salamanders,67,319.5,TRUE
+hunter,black chinchompas,73,315,TRUE

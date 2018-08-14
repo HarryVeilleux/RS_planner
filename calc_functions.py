@@ -47,28 +47,37 @@ def acts_lvl_df(skill, target, current = 1, exp = False, showall = False) :
             next # Skip overleveled methods
     return exp_dict
 
-#def plan_lvl(skill, target, current = 1, exp = False, showall = False) :
-#    """ Generalized planner """
-#    def acts_lvl_df(skill, target, current = 1, exp = False, showall = False) :
-#        """ Generalized skill calculator using pandas DataFrame """
-#        if exp == False :
-#            curr_exp = exp_table[current] # Returns exp total given level
-#        else :
-#            curr_exp = current
-#            
-#        exp_dict = {} # Number of actions to level
-#        bw_dict = {} # Methods and levels of "between" methods
-#        for i, row in actions_df[actions_df['skill']==skill].iterrows() :
-#            if showall == False and np.logical_and(row['level'] < current, row['always'] != True) :
-#                next # Skip underleveled methods
-#            elif np.logical_and(row['level'] <= target, row['level'] > current) :
-#                level = row['level']
-#                round_val = math.ceil((exp_table[target]-exp_table[level])/row['exp'])
-#                exp_dict[row['method']] = round_val # Add methods higher than current but less than target
-#                bw_dict[row['method']] = row['level']
-#            elif row['level'] <= target :
-#                round_val = math.ceil((exp_table[target]-curr_exp)/row['exp'])
-#                exp_dict[row['method']] = round_val # Add relevant methods
-#            else:
-#                next # Skip overleveled methods
-#        return exp_dict, bw_dict
+def plan_lvl(skill, target, current=1, exp = False, showall = False) :
+    """ Generalized planner """
+    if exp == False :
+        curr_exp = exp_table[current] # Returns exp total given level
+    else :
+        curr_exp = current
+    
+    targ_exp = exp_table[target]
+    exp_diff = targ_exp - curr_exp
+    
+    skill_df = actions_df[actions_df['skill']==skill] # Subset full skill df for skill
+    rel_df = skill_df[np.logical_or(skill_df['always']==True, # always = True rows are included but later logic does not show them
+                                    np.logical_and(skill_df['level']>=max(skill_df[skill_df['level']<=current]['level']),
+                                     skill_df['level']<target))] # Subset for only relevant methods
+    
+    exp_dict = {} # Dictionary of actions from curr to targ OR breakpoint to targ
+    bp_dict = {} # Dictionary of breakpoint methods/levels
+    for i, row in rel_df.iterrows() :
+        if row['level'] <= current :
+            round_val = math.ceil(exp_diff/row['exp'])
+            exp_dict[row['method']] = round_val # Add first method(s)
+            first_act = [row['method'], str(round_val), row['exp']] # Store first method name, no. of actions, and exp
+        else :
+            round_val = math.ceil((targ_exp-exp_table[row['level']])/row['exp'])
+            exp_dict[row['method']] = round_val # Add actions from breakpoint to target
+            bp_dict[row['method']] = row['level']
+
+    counter = 1
+    print(str(counter) + '. ' + first_act[1] + ' ' + first_act[0]) # Print first method
+    for i, j in bp_dict.items() : # Print each other path
+        counter = counter + 1
+        print('OR')
+        first_act_val = math.ceil((exp_table[j]-curr_exp)/first_act[2])
+        print(str(counter) + '. ' + str(first_act_val) + ' ' + first_act[0] + ' then ' + str(exp_dict[i]) + ' ' + i)
