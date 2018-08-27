@@ -14,29 +14,63 @@ exp_df = pd.read_csv(filepath + 'exp.csv')
 
 """ Skill dictionary template """
 
-user_dict = {'attack':1,
-             'strength':1,
-             'defence':1,
-             'ranged':1,
-             'prayer':1,
-             'magic':1,
-             'runecrafting':1,
-             'hitpoints':10,
-             'crafting':1,
-             'mining':1,
-             'smithing':1,
-             'fishing':1,
-             'cooking':1,
-             'firemaking':1,
-             'woodcutting':1,
-             'agility':1,
-             'herblore':1,
-             'thieving':1,
-             'fletching':1,
-             'slayer':1,
-             'farming':1,
-             'construction':1,
-             'hunter':1}
+user_dict = {'attack':0,
+             'strength':0,
+             'defence':0,
+             'ranged':0,
+             'prayer':0,
+             'magic':0,
+             'runecrafting':0,
+             'hitpoints':1154,
+             'crafting':0,
+             'mining':0,
+             'smithing':0,
+             'fishing':0,
+             'cooking':0,
+             'firemaking':0,
+             'woodcutting':0,
+             'agility':0,
+             'herblore':0,
+             'thieving':0,
+             'fletching':0,
+             'slayer':0,
+             'farming':0,
+             'construction':0,
+             'hunter':0}
+
+""" Preliminary quest dictionary """
+
+quest_dict = {'legends\' quest': ['waterfall quest',
+  'family crest',
+  'heroes\' quest',
+  'shilo village',
+  'underground pass'],
+ 'heroes\' quest': ['shield of arrav', 'lost city', 'merlin\'s crystal', 'dragon slayer'],
+ 'shilo village': ['jungle potion'],
+ 'jungle potion': ['druidic ritual'],
+ 'underground pass': ['biohazard'],
+ 'biohazard':['plague city'],
+ 'nature spirit':['priest in peril', 'the restless ghost'],
+ 'shadow of the storm':['demon slayer','the golem'],
+ 'monkey madness i':['the grand tree','tree gnome village'],
+ 'desert treasure':['the dig site','temple of ikov','the tourist trap','troll stronghold'],
+ 'troll stronghold':['death plateau'],
+ 'recipe for disaster':['cook\'s assistant','fishing contest','goblin diplomacy','big chompy bird hunting','murder mystery','nature spirit','witch\'s house','gertrude\'s cat','shadow of the storm','legends\' quest','monkey madness i','desert treasure','horror from the deep']}
+
+""" Dictionary of abbreviated quest names """
+
+quest_tags = {'legends':'legends\' quest',
+              'heroes':'heroes\' quest',
+              'soa':'shield of arrav',
+              'merlin':'merlin\'s crystal',
+              'shilo':'shilo village',
+              'rfd':'recipe for disaster',
+              'barrows gloves':'recipe for disaster',
+              'bgloves':'recipe for disaster'}
+
+""" Exceptions list """
+
+spec_skills = ['prayer','fletching']
 
 #""" Experience table """
 #

@@ -13,13 +13,18 @@ import pandas as pd
 def plan_lvl(skill, target, current=None, exp = False, showall = False) :
     """ Generalized planner """
     if current is None :
-        current = user_dict[skill]
-        curr_exp = exp_table[current]
-        print('Current level missing from function call\nDefaulting to: ' + str(current) + '\n')
+        curr_exp = user_dict[skill]
+        current = max(exp_df['level'][exp_df['exp']<=curr_exp])
+        print('Defaulting to: Level ' 
+              + str(current) + ', ' + str(curr_exp) + ' experience\n')
+    elif exp == True :
+        curr_exp = current
+        current = max(exp_df['level'][exp_df['exp']<=curr_exp])
+        print('Current level: ' + str(current))
     else :
-        curr_exp = exp_table[current] # Returns exp total given level
+        curr_exp = exp_df.loc[current-1,'exp'] # Returns exp total given level
     
-    targ_exp = exp_table[target]
+    targ_exp = exp_df.loc[target-1,'exp']
     exp_diff = targ_exp - curr_exp
     
     skill_df = actions_df[actions_df['skill']==skill] # Subset full skill df for skill
@@ -27,7 +32,7 @@ def plan_lvl(skill, target, current=None, exp = False, showall = False) :
                                                    skill_df['always']==True), # always = True rows are included but later logic does not show them
                                     np.logical_and(skill_df['level']>=max(skill_df[skill_df['level']<=current]['level']),
                                                    skill_df['level']<target))] # Subset for only relevant methods
-    
+       
     exp_dict = {} # Dictionary of actions from curr to targ OR breakpoint to targ
     bp_dict = {} # Dictionary of breakpoint methods/levels
     first_act = ''
@@ -40,7 +45,7 @@ def plan_lvl(skill, target, current=None, exp = False, showall = False) :
             else :
                 bp_dict[row['method']] = row['level']
         else :
-            round_val = math.ceil((targ_exp-exp_table[row['level']])/row['exp'])
+            round_val = math.ceil((targ_exp-exp_df['exp'][exp_df['level']==row['level']])/row['exp'])
             exp_dict[row['method']] = round_val # Add actions from breakpoint to target
             bp_dict[row['method']] = row['level']
 
@@ -48,33 +53,41 @@ def plan_lvl(skill, target, current=None, exp = False, showall = False) :
     print(str(counter) + '. ' + first_act[1] + ' ' + first_act[0]) # Print first method
     for i, j in bp_dict.items() : # Print each other path
         counter = counter + 1
-        first_act_val = math.ceil((exp_table[j]-curr_exp)/first_act[2])
-        
+        first_act_val = math.ceil((exp_df.loc[j,'exp']-curr_exp)/first_act[2])
+
         if first_act_val<=0 :
             print(str(counter) + '. ' + str(exp_dict[i]) + ' ' + i)
         else :
-            print(str(counter) + '. ' + str(first_act_val) + ' ' + first_act[0] + ' then ' + str(exp_dict[i]) + ' ' + i)
+                print(str(counter) + '. ' + str(first_act_val) + ' ' + first_act[0] + ' then ' + str(exp_dict[i]) + ' ' + i)
 
-def update_user(**skills):
+def update_user(exp=False,**skills):
+    """ Update user dictionary with new experience """
     print('BEFORE')
-    for k, v in user_dict.items():
+    for k, v in user_dict.items() : # Print previous level/experience values
         if k in skills.keys() :
-            print(k.capitalize() + ": " + str(v))
-    
+            old_lvl = max(exp_df['level'][exp_df['exp']<=v])
+            print(k.capitalize() + ': Level ' + str(old_lvl) + ', ' + str(v) + ' experience')
+        
     print('\nAFTER')
     
-    for k, v in skills.items() :
-        user_dict[k] = v
-    
-    for k, v in user_dict.items():
-        if k in skills.keys() :
-            print(k.capitalize() + ": " + str(v))
+    if exp == True : # Update user_dict with new experience values
+        for k, v in skills.items() :
+            user_dict[k] = v
+    else :
+        for k, v in skills.items() :
+            user_dict[k] = int(exp_df.loc[v-1,'exp'])
             
+    for k, v in user_dict.items(): # Print new level/experience values
+        if k in skills.keys() :
+            new_lvl = max(exp_df['level'][exp_df['exp']<=v])
+            print(k.capitalize() + ': Level ' + str(new_lvl) + ', ' + str(v) + ' experience')
+
+#
+#
+#
+#
+         
 """ Old code """
-#
-#
-#
-#
 
 def add_skill(skill, filepath):
     reader = csv.reader(open(filepath, 'r'))
