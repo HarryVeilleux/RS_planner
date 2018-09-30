@@ -1,0 +1,16 @@
+SKILLS
+none
+QUESTS
+none
+WALKTHROUGH
+Talk to the Cook in Lumbridge Castle's kitchen.
+Head to the Lumbridge cow field.
+Use a bucket on one of the dairy cows.
+Head to the chicken farm north-west of the cow field.
+Take an egg from one of the spawns on the ground.
+Head to the mill across the river from the chicken farm.
+Pick some grain from outside.
+Climb up to the top floor of the mill and use the grain with the hopper.
+Pull the lever.
+Climb back down and take the flour from the flour bin with an empty pot.
+Report back to the cook.

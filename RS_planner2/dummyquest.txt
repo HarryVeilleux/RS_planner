@@ -1,0 +1,5 @@
+required skills,levels separated by semicolons OR none
+required quests separated by commas OR none
+walkthrough
+...
+final line

@@ -1,0 +1,10 @@
+none
+none
+Talk to Doric (1, 1).
+Talk to Doric again holding the spacebar.
+Go to the Dwarven Mine.
+Mine 2 iron ores and 4 copper ores.
+[m] Iron and copper ore are found SE of the ladder down.
+Mine 6 clay.
+[m] Clay is found south of the iron and copper, near the agility shortcut.
+Return to Doric with ores in your inventory.

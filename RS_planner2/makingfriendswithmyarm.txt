@@ -1,0 +1,56 @@
+firemaking,66;mining,72;construction,35;agility,68
+my arm's big adventure,swan song,cold war, romeo & juliet
+bucket,1;rope,1;pickaxe,1;saw,1;hammer,1;bolt of cloth,1;mahogany plank,5;cadava berry,1
+Talk to Burntmeat (2,2).
+[m] Burntmeat is in the troll stronghold kitchen (stairs to south).
+Talk to My Arm (2,2).
+[m] My Arm is by the herb patch on the roof of the stronghold.
+Talk to Larry at the Polar Hunter area (2,1).
+[m] Take fairy ring DKS and run west.
+Talk to Larry again (3).
+Board the boat.
+Talk to My Arm.
+Attempt to mine the cave entrance.
+Climb up the rockslides nearby and use a rope on the tree.
+[m] You must boost to 68 agility for this step.
+[m] Search the wrecked boat for rope and a pickaxe.
+Climb the rope and cross the ledge.
+Climb the last rockslide and pass the fallen tree.
+Talk to Boulder (2).
+Sneak in via the broken fence just east.
+Go south along the city's edge, then west.
+[m] Once you reach a small alleyway, recover your run energy if necessary.
+Run along the western wall then zigzag north until you reach the hole in the ground to enter the mine.
+Quickly go south through the narrow gap near the body of water.
+[m] This gap acts as a checkpoint should you be knocked out again.
+Empty your hands and swim further into the cave while avoiding the troll's stones.
+Create a straight five tile path with the rocks the final troll throws starting from the edge of the water.
+[m] Click one tile south as soon as the throwing animation starts until the path is finished.
+Mine the cave entrance.
+Talk to Mother (3).
+After Snowflake leaves, pick all possible options (1,1,1,1).
+Talk to My Arm (1,1,2,4,2).
+Talk to the Wise Old Man in Draynor Village (1,2,2).
+Build the coffin next to the Wise Old Man.
+Speak to the Apothecary in Varrock.
+Pick chat option "Talk about Making Friends with My Arm."
+Talk to Wise Old Man (1).
+Pick up the coffin.
+Return to Weiss by traveling with Larry's boat.
+Talk to My Arm.
+Talk to Odd Mushroom (1).
+Talk to Snowflake (1).
+Fight Don't Know What.
+[m] Use protect from range and damage him with melee or range.
+Fight Mother.
+[m] Activate protect from range.
+Grab a bucket from the pile and use it on the large barrel of water.
+Use the bucket of water on the Fire of Domination.
+[m] Use range and stay out of melee range to avoid prayer-draining stun.
+Talk to My Arm.
+Talk to Wise Old Man (1).
+Pick up some goat dung in the north-east building.
+[m] Buckets of water can be found inside and emptied.
+Talk to Snowflake.
+Read the Weiss fire notes Snowflake gives you.
+Talk to Snowflake.

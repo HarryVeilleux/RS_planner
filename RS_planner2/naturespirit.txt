@@ -1,0 +1,31 @@
+crafting,18
+priest in peril,restless ghost
+silver sickle,1;ghostspeak amulet,1
+Talk to Drezel to get three meat pies and three apple pies (2,2,4,1).
+Leave the temple and run through Mort Myre Swamp to the Nature Grotto.
+[m] The grotto is south of the temple, NW of Mort'ton.
+Attempt to enter the grotto and speak to Filliman (2).
+[m] You must have your Ghostspeak Amulet equipped.
+Take the washing bowl off the nearby table and pick up the mirror.
+Use the mirror on Filliman.
+Search the grotto tree to get Filliman's journal and use it on him (4).
+[m] Right-click the grotto to search.
+Make sure Filliman gave you a Druidic spell.
+Return to Drezel and ask him to bless you.
+Enter the swamp and cast the Druidic spell next to a rotting log.
+Pick a mushroom and bring it back to the grotto.
+Use the mushroom on the light-brown stone.
+Use the used spell card on the grey stone.
+Stand on the orange stone and talk to Filliman (3).
+[m] Your character must be on top of the orange stone when you talk.
+Enter the hole under the tree.
+Search the grotto in the middle of the cave.
+Talk to the nature spirit to give him your silver sickle.
+Pick up the Druid pouch.
+Leave the grotto and stand next to rotting plants.
+Use your silver sickle (b)'s Bloom ability to harvest swamp plants.
+Fill your Druid pouch with at least 9 charges.
+Use the filled Druid pouch on Ghasts to make them attackable.
+Kill 3 Ghasts.
+Return to the grotto and speak to the nature spirit.
+[m] Click on the grotto to summon the nature spirit.
